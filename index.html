@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Fournil de la Gère — Boulangerie artisanale</title>
+  <meta name="description" content="Boulangerie-pâtisserie artisanale : pains au levain, viennoiseries pur beurre et pâtisseries maison, cuits chaque matin au feu de bois.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥖</text></svg>">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#accueil" class="logo">
+        <span class="logo__mark">F</span>
+        <span class="logo__text">Le Fournil <em>de la Gère</em></span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#creations">Nos créations</a>
+        <a href="#savoir-faire">Savoir-faire</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn--small">Commander</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="accueil">
+    <div class="hero__bg"></div>
+    <div class="container hero__content">
+      <p class="eyebrow reveal">Boulangerie artisanale · depuis 1987</p>
+      <h1 class="reveal">Le goût du pain<br><em>comme autrefois.</em></h1>
+      <p class="hero__lead reveal">Levain naturel, farines locales et cuisson au feu de bois. Chaque matin dès 6h30, nos fournées sortent du four pour vous.</p>
+      <div class="hero__actions reveal">
+        <a href="#creations" class="btn">Découvrir nos produits</a>
+        <a href="#contact" class="btn btn--ghost">Nous trouver</a>
+      </div>
+      <div class="status reveal" id="status">
+        <span class="status__dot"></span>
+        <span id="statusText">Chargement des horaires…</span>
+      </div>
+    </div>
+    <a href="#intro" class="hero__scroll" aria-label="Défiler vers le bas"><span></span></a>
+  </section>
+
+  <!-- ===== INTRO / CHIFFRES ===== -->
+  <section class="intro" id="intro">
+    <div class="container intro__grid">
+      <div class="intro__text reveal">
+        <h2>Une maison de famille,<br>un four qui ne s'éteint jamais.</h2>
+        <p>Au cœur de la vieille ville, notre fournil perpétue un savoir-faire transmis de génération en génération. Nous travaillons des farines issues de moulins de la région, sans additifs, et laissons au temps le soin de révéler les arômes.</p>
+      </div>
+      <div class="stats">
+        <div class="stat reveal"><strong data-count="37">0</strong><span>ans de passion</span></div>
+        <div class="stat reveal"><strong data-count="48">0</strong><span>heures de fermentation</span></div>
+        <div class="stat reveal"><strong data-count="100">0</strong><span>% farines locales</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CRÉATIONS ===== -->
+  <section class="section creations" id="creations">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Nos créations</p>
+        <h2>Fait maison, chaque jour</h2>
+      </div>
+
+      <div class="tabs reveal" role="tablist">
+        <button class="tab is-active" data-filter="all">Tout</button>
+        <button class="tab" data-filter="pain">Pains</button>
+        <button class="tab" data-filter="viennoiserie">Viennoiseries</button>
+        <button class="tab" data-filter="patisserie">Pâtisseries</button>
+      </div>
+
+      <div class="products" id="products">
+        <article class="card reveal" data-cat="pain">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800&q=80&auto=format&fit=crop" alt="Miche de campagne au levain" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Pain</span>
+            <h3>Miche de campagne</h3>
+            <p>Levain naturel, farine T80, croûte épaisse et mie alvéolée.</p>
+            <span class="price">6,40 €<small> / kg</small></span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="viennoiserie">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?w=800&q=80&auto=format&fit=crop" alt="Croissants pur beurre" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Viennoiserie</span>
+            <h3>Croissant pur beurre</h3>
+            <p>Beurre AOP Charentes-Poitou, feuilletage sur trois jours.</p>
+            <span class="price">1,30 €</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="patisserie">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=80&auto=format&fit=crop" alt="Tarte au citron meringuée" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Pâtisserie</span>
+            <h3>Tarte citron meringuée</h3>
+            <p>Pâte sablée, crémeux citron de Menton, meringue italienne flambée.</p>
+            <span class="price">4,20 €<small> / part</small></span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="pain">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1606101273945-e9eba91c0dc4?w=800&q=80&auto=format&fit=crop" alt="Pain aux céréales tranché" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Pain</span>
+            <h3>Pain aux graines</h3>
+            <p>Tournesol, lin, sésame et courge torréfiés. Riche et croustillant.</p>
+            <span class="price">3,80 €</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="viennoiserie">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=800&q=80&auto=format&fit=crop" alt="Pains au chocolat" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Viennoiserie</span>
+            <h3>Pain au chocolat</h3>
+            <p>Deux barres de chocolat noir 64 %, feuilletage doré et fondant.</p>
+            <span class="price">1,40 €</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="patisserie">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=800&q=80&auto=format&fit=crop" alt="Tartelettes aux fruits frais" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Pâtisserie</span>
+            <h3>Tartelette aux fruits</h3>
+            <p>Crème pâtissière vanille Bourbon et fruits frais de saison.</p>
+            <span class="price">3,90 €</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="viennoiserie">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=800&q=80&auto=format&fit=crop" alt="Roulés à la cannelle" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Viennoiserie</span>
+            <h3>Roulé cannelle</h3>
+            <p>Brioche moelleuse, sucre muscovado et cannelle de Ceylan.</p>
+            <span class="price">2,60 €</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="pain">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&q=80&auto=format&fit=crop" alt="Pain de seigle tranché" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Pain</span>
+            <h3>Grand seigle</h3>
+            <p>70 % seigle, fermentation longue, parfait avec fromages et huîtres.</p>
+            <span class="price">4,50 €</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="patisserie">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?w=800&q=80&auto=format&fit=crop" alt="Macarons colorés" loading="lazy"></div>
+          <div class="card__body">
+            <span class="tag">Pâtisserie</span>
+            <h3>Macarons maison</h3>
+            <p>Pistache, framboise, caramel beurre salé, chocolat… à la pièce ou en coffret.</p>
+            <span class="price">1,50 €<small> / pièce</small></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAVOIR-FAIRE ===== -->
+  <section class="section craft" id="savoir-faire">
+    <div class="container craft__grid">
+      <div class="craft__media reveal">
+        <img class="craft__img craft__img--main" src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=1000&q=80&auto=format&fit=crop" alt="Mains du boulanger pétrissant la pâte" loading="lazy">
+        <img class="craft__img craft__img--small" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80&auto=format&fit=crop" alt="Pains rustiques et épis de blé" loading="lazy">
+        <div class="craft__badge"><strong>Feu<br>de bois</strong></div>
+      </div>
+      <div class="craft__text reveal">
+        <p class="eyebrow">Notre savoir-faire</p>
+        <h2>Le temps est notre ingrédient secret</h2>
+        <p>Chez nous, rien ne presse. Nos pâtes reposent jusqu'à 48 heures pour développer des saveurs profondes et une meilleure digestibilité.</p>
+        <ul class="steps">
+          <li><span>01</span><div><h4>Farines de nos voisins</h4><p>Blés anciens moulus sur meule de pierre, à moins de 50 km du fournil.</p></div></li>
+          <li><span>02</span><div><h4>Levain vivant</h4><p>Nourri chaque jour depuis 1987, il donne à nos pains leur caractère unique.</p></div></li>
+          <li><span>03</span><div><h4>Cuisson au feu de bois</h4><p>Un four en briques réfractaires pour une croûte caramélisée inimitable.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANDEAU ===== -->
+  <section class="banner">
+    <div class="banner__bg"></div>
+    <div class="container banner__content reveal">
+      <h2>Commandez vos gâteaux d'anniversaire<br><em>et pièces montées</em></h2>
+      <p>Mariages, baptêmes, événements d'entreprise : nous créons la pâtisserie qui vous ressemble. Commande 72h à l'avance.</p>
+      <a href="#contact" class="btn">Demander un devis</a>
+    </div>
+  </section>
+
+  <!-- ===== GALERIE ===== -->
+  <section class="section gallery" id="galerie">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Galerie</p>
+        <h2>Dans notre fournil</h2>
+      </div>
+      <div class="gallery__grid">
+        <figure class="g g--tall reveal"><img src="https://images.unsplash.com/photo-1587241321921-91a834d6d191?w=900&q=80&auto=format&fit=crop" alt="Intérieur chaleureux de la boulangerie" loading="lazy"></figure>
+        <figure class="g reveal"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=900&q=80&auto=format&fit=crop" alt="Croissants saupoudrés de sucre" loading="lazy"></figure>
+        <figure class="g reveal"><img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=900&q=80&auto=format&fit=crop" alt="Assortiment de pains et baguettes" loading="lazy"></figure>
+        <figure class="g g--wide reveal"><img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=1200&q=80&auto=format&fit=crop" alt="Vitrine de viennoiseries" loading="lazy"></figure>
+        <figure class="g reveal"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=900&q=80&auto=format&fit=crop" alt="Fraisier aux framboises" loading="lazy"></figure>
+        <figure class="g reveal"><img src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=900&q=80&auto=format&fit=crop" alt="Croissants sur le comptoir" loading="lazy"></figure>
+        <figure class="g reveal"><img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=900&q=80&auto=format&fit=crop" alt="Étals de la boulangerie" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVIS ===== -->
+  <section class="section reviews" id="avis">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Ils nous aiment</p>
+        <h2>4,9 / 5 sur plus de 600 avis</h2>
+      </div>
+      <div class="slider reveal">
+        <div class="slider__track" id="sliderTrack">
+          <blockquote class="review">
+            <div class="stars">★★★★★</div>
+            <p>« Le meilleur pain au levain de la région, sans hésiter. La croûte est incroyable et il se garde toute la semaine. »</p>
+            <cite>Claire M. — cliente depuis 10 ans</cite>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars">★★★★★</div>
+            <p>« Des croissants comme à Paris, voire meilleurs. L'accueil est toujours souriant, on se sent comme à la maison. »</p>
+            <cite>Thomas R.</cite>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars">★★★★★</div>
+            <p>« Ils ont réalisé notre pièce montée de mariage : tous les invités en parlent encore. Merci pour ce travail d'orfèvre ! »</p>
+            <cite>Sophie & Karim</cite>
+          </blockquote>
+        </div>
+        <div class="slider__dots" id="sliderDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__info reveal">
+        <p class="eyebrow">Venez nous voir</p>
+        <h2>Horaires & accès</h2>
+        <table class="hours" id="hours">
+          <tr data-day="1"><td>Lundi</td><td>Fermé</td></tr>
+          <tr data-day="2"><td>Mardi</td><td>6h30 – 19h30</td></tr>
+          <tr data-day="3"><td>Mercredi</td><td>6h30 – 19h30</td></tr>
+          <tr data-day="4"><td>Jeudi</td><td>6h30 – 19h30</td></tr>
+          <tr data-day="5"><td>Vendredi</td><td>6h30 – 19h30</td></tr>
+          <tr data-day="6"><td>Samedi</td><td>6h30 – 19h30</td></tr>
+          <tr data-day="0"><td>Dimanche</td><td>7h00 – 13h00</td></tr>
+        </table>
+        <ul class="contact__list">
+          <li><span>📍</span> 12 quai de la Gère, 38200 Vienne</li>
+          <li><span>📞</span> <a href="tel:+33400000000">04 00 00 00 00</a></li>
+          <li><span>✉️</span> <a href="mailto:bonjour@fournil-gere.fr">bonjour@fournil-gere.fr</a></li>
+        </ul>
+      </div>
+
+      <form class="form reveal" id="form" novalidate>
+        <h3>Commander ou nous écrire</h3>
+        <div class="form__row">
+          <label>Nom<input type="text" name="nom" required placeholder="Votre nom"></label>
+          <label>Téléphone<input type="tel" name="tel" placeholder="06 00 00 00 00"></label>
+        </div>
+        <label>Email<input type="email" name="email" required placeholder="vous@exemple.fr"></label>
+        <label>Objet
+          <select name="objet">
+            <option>Commande de pain / viennoiseries</option>
+            <option>Gâteau personnalisé</option>
+            <option>Événement / traiteur</option>
+            <option>Autre demande</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" rows="4" required placeholder="Ex : 2 miches de campagne pour samedi 9h"></textarea></label>
+        <button type="submit" class="btn btn--full">Envoyer</button>
+        <p class="form__msg" id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#accueil" class="logo logo--light">
+        <span class="logo__mark">F</span>
+        <span class="logo__text">Le Fournil <em>de la Gère</em></span>
+      </a>
+      <p>Boulangerie · Pâtisserie · Feu de bois</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Google">Google</a>
+      </div>
+      <small>© <span id="year"></span> Le Fournil de la Gère — Site de démonstration. Photos : Unsplash.</small>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Fermer">×</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
